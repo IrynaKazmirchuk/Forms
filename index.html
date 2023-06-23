@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Forms</h1>
+    <div class="container">
+      <label class="forms">
+        <span class="forms__title">Name</span>
+        <input
+          class="forms__input"
+          type="text"
+          name="name"
+          placeholder="Enter your name"
+        />
+      </label>
+      <label class="forms">
+        <span class="forms__title">Password</span>
+        <input
+          class="forms__input"
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+        />
+      </label>
+      <label class="forms">
+        <span class="forms__title">Bio</span>
+        <textarea
+          class="forms__input _textarea"
+          type="text"
+          name="name"
+          placeholder="your bio"
+        ></textarea>
+      </label>
+      <label class="forms">
+        <span class="forms__title">Gender</span>
+        <select class="forms__input">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </label>
+      <label class="checkbox">
+        <input class="checkbox__input" type="checkbox" name="text" />
+        <div class="checkbox__body">
+          <span class="checkbox__icon">
+            <span class="checkmark"></span>
+          </span>
+          <span class="checkbox__text">Text</span>
+        </div>
+      </label>
+      <!-- radio button -->
+      <label class="radio">
+        <input class="radio__input" type="radio" name="text" />
+        <div class="radio__body">
+          <span class="radio__icon">
+            <span class="point"></span>
+          </span>
+          <span class="radio__text">Text</span>
+        </div>
+      </label>
+      <!-- switch -->
+      <label class="switch">
+        <input class="switch__input" type="checkbox" name="text" />
+        <div class="switch__body">
+          <span class="switch__icon">
+            <span class="switch__point"></span>
+          </span>
+        </div>
+      </label>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  padding: 20px;
+}
+.container {
+  display: grid;
+  gap: 20px;
+}
+h1 {
+  margin-bottom: 100px;
+}
+.forms {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+}
+.forms__title {
+  color: #6f7482;
+  font-size: 16px;
+  line-height: 144%;
+  letter-spacing: 0.16px;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+.forms__input {
+  padding: 12px;
+  color: #3b4256;
+  font-size: 16px;
+  line-height: 144%;
+  letter-spacing: 0.16px;
+  border-radius: 4px;
+  background: #f8fafc;
+  border: 1px solid transparent;
+  outline: 0;
+  color: #3b4256;
+}
+.forms__input:focus {
+  border-color: cornflowerblue;
+}
+
+.forms__input::placeholder {
+  color: #b8bcca;
+}
+.forms__input._textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 400px;
+}
+/* CHECKBOX */
+.checkbox {
+  display: inline-flex;
+  gap: 10px;
+}
+.checkbox__input {
+  display: none;
+}
+.checkbox__input:checked ~ .checkbox__body .checkbox__icon {
+  background: #3b4256;
+}
+.checkbox__input:checked ~ .checkbox__body .checkmark {
+  opacity: 1;
+}
+.checkbox__input:disabled ~ .checkbox__body .checkbox__icon {
+  background: #b8bcca;
+  border-color: #b8bcca;
+  cursor: default;
+}
+.checkbox__input:disabled ~ .checkbox__body .checkbox__text {
+  cursor: default;
+}
+.checkbox__body {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox__icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #3b4256;
+  border-radius: 4px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.checkmark {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 2px);
+  width: 8px;
+  height: 14px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+  transition: 0.2s all ease-in-out;
+}
+.checkbox__text {
+  color: #3b4256;
+  font-size: 14px;
+  line-height: 140%;
+  cursor: pointer;
+}
+/* CHECKBOX END */
+/* RADIO */
+.radio {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.radio__input {
+  display: none;
+}
+.radio__body {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.radio__icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #3b4256;
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+}
+.radio__input:checked ~ .radio__body .radio__icon {
+  border: 3px solid #3b4256;
+}
+.radio__input:checked ~ .radio__body .point {
+  opacity: 1;
+}
+.radio__input:disabled ~ .radio__body .radio__icon {
+  border-color: #b8bcca;
+  cursor: default;
+}
+.radio__input:disabled ~ .radio__body .radio__icon .point {
+  background: #b8bcca;
+  cursor: default;
+}
+.point {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #3b4256;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: 0.2s all ease-in-out;
+}
+.radio__text {
+  color: #3b4256;
+  font-size: 14px;
+  line-height: 140%;
+  cursor: pointer;
+}
+/* RADIO END */
+/* SWITCH */
+.switch__input {
+  display: none;
+}
+.switch__icon {
+  display: inline-block;
+  width: 51px;
+  height: 31px;
+  border-radius: 39%;
+  position: relative;
+  background: #e2e7ed;
+  cursor: pointer;
+}
+.switch__point {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 27px;
+  width: 27px;
+  border-radius: 50%;
+  background: #ffffff;
+  transform: translate(-90%, -50%);
+  transition: 0.2s all ease-in-out;
+}
+.switch__input:checked ~ .switch__body .switch__icon {
+  background: #3b4256;
+}
+.switch__input:checked ~ .switch__body .switch__point {
+  transform: translate(-10%, -50%);
+}
+.switch__input:disabled ~ .switch__body .switch__icon {
+  background: #b8bcca;
+}
+.switch__input:disabled ~ .switch__body .switch__point {
+  transform: translate(-10%, -50%);
+}
